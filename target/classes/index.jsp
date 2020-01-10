@@ -11,7 +11,7 @@
 	<body>
 		<table width="100%">
 			<tr>
-				<td><h1>Sign In & Sign Up : </h1></td>
+				<td><h1>Sign In : </h1></td>
 			</tr>
 		</table>
 		<form action="SignIn" method="post">

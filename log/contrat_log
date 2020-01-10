@@ -7484,3 +7484,266 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2020-01-10 09:07:40,214 INFO o.s.j.e.a.AnnotationMBeanExporter [restartedMain] Registering beans for JMX exposure on startup
 2020-01-10 09:07:40,226 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat started on port(s): 82 (http)
 2020-01-10 09:07:40,228 INFO f.t.c.App [restartedMain] Started App in 1.195 seconds (JVM running for 2033.472)
+2020-01-10 13:15:58,117 INFO f.t.c.App [restartedMain] Starting App on LAPTOP-LKVNBR6U with PID 8752 (started by nabil in C:\Users\nabil\Desktop\FISE3\Archi N-Tiers\contratTelecom)
+2020-01-10 13:15:58,123 INFO f.t.c.App [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-10 13:15:58,172 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [restartedMain] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@106128b: startup date [Fri Jan 10 13:15:58 CET 2020]; root of context hierarchy
+2020-01-10 13:15:59,559 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat initialized with port(s): 82 (http)
+2020-01-10 13:15:59,781 INFO o.s.w.c.ContextLoader [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1616 ms
+2020-01-10 13:15:59,906 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2020-01-10 13:15:59,907 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-01-10 13:15:59,909 INFO o.s.b.w.s.FilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-10 13:16:00,024 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Building JPA container EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:16:01,512 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:16:02,280 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/index || /]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.accueil()
+2020-01-10 13:16:02,281 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageadmin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageAdminGet()
+2020-01-10 13:16:02,281 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageclient],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageClientGet()
+2020-01-10 13:16:02,281 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscription],methods=[POST]}" onto public org.springframework.web.servlet.view.RedirectView fr.telecom_st_etienne.contrat.controller.ContratController.inscription(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2020-01-10 13:16:02,281 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/entreprises],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.developpeurGet()
+2020-01-10 13:16:02,282 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/SignIn],methods=[POST]}" onto public org.springframework.web.servlet.view.RedirectView fr.telecom_st_etienne.contrat.controller.ContratController.connexion(java.lang.String,java.lang.String)
+2020-01-10 13:16:02,285 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-10 13:16:02,285 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-10 13:16:02,309 INFO o.s.w.s.h.SimpleUrlHandlerMapping [restartedMain] Mapped URL path [/style/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-10 13:16:02,356 INFO o.s.w.s.m.m.a.RequestMappingHandlerAdapter [restartedMain] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@106128b: startup date [Fri Jan 10 13:15:58 CET 2020]; root of context hierarchy
+2020-01-10 13:16:02,702 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-01-10 13:16:02,723 INFO o.s.j.e.a.AnnotationMBeanExporter [restartedMain] Registering beans for JMX exposure on startup
+2020-01-10 13:16:02,771 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat started on port(s): 82 (http)
+2020-01-10 13:16:02,775 INFO f.t.c.App [restartedMain] Started App in 4.95 seconds (JVM running for 6.573)
+2020-01-10 13:16:10,775 INFO o.s.w.s.DispatcherServlet [http-nio-82-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2020-01-10 13:16:10,801 INFO o.s.w.s.DispatcherServlet [http-nio-82-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2020-01-10 13:16:13,701 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [http-nio-82-exec-2] Resolved exception caused by handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-01-10 13:19:50,996 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [Thread-11] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@106128b: startup date [Fri Jan 10 13:15:58 CET 2020]; root of context hierarchy
+2020-01-10 13:19:50,998 INFO o.s.j.e.a.AnnotationMBeanExporter [Thread-11] Unregistering JMX-exposed beans on shutdown
+2020-01-10 13:19:51,001 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [Thread-11] Closing JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:19:51,409 INFO f.t.c.App [restartedMain] Starting App on LAPTOP-LKVNBR6U with PID 8752 (started by nabil in C:\Users\nabil\Desktop\FISE3\Archi N-Tiers\contratTelecom)
+2020-01-10 13:19:51,409 INFO f.t.c.App [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-10 13:19:51,411 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [restartedMain] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c1c81: startup date [Fri Jan 10 13:19:51 CET 2020]; root of context hierarchy
+2020-01-10 13:19:51,834 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat initialized with port(s): 82 (http)
+2020-01-10 13:19:51,894 INFO o.s.w.c.ContextLoader [localhost-startStop-1] Root WebApplicationContext: initialization completed in 483 ms
+2020-01-10 13:19:51,918 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2020-01-10 13:19:51,919 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-01-10 13:19:51,919 INFO o.s.b.w.s.FilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-10 13:19:51,941 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Building JPA container EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:19:52,050 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:19:52,184 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/index || /]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.accueil()
+2020-01-10 13:19:52,184 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageadmin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageAdminGet()
+2020-01-10 13:19:52,184 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageclient],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageClientGet()
+2020-01-10 13:19:52,184 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscription],methods=[POST]}" onto public org.springframework.web.servlet.view.RedirectView fr.telecom_st_etienne.contrat.controller.ContratController.inscription(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2020-01-10 13:19:52,184 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscription],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.inscription()
+2020-01-10 13:19:52,184 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/entreprises],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.developpeurGet()
+2020-01-10 13:19:52,185 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/SignIn],methods=[POST]}" onto public org.springframework.web.servlet.view.RedirectView fr.telecom_st_etienne.contrat.controller.ContratController.connexion(java.lang.String,java.lang.String)
+2020-01-10 13:19:52,186 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-10 13:19:52,186 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-10 13:19:52,195 INFO o.s.w.s.h.SimpleUrlHandlerMapping [restartedMain] Mapped URL path [/style/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-10 13:19:52,216 INFO o.s.w.s.m.m.a.RequestMappingHandlerAdapter [restartedMain] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c1c81: startup date [Fri Jan 10 13:19:51 CET 2020]; root of context hierarchy
+2020-01-10 13:19:52,369 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-01-10 13:19:52,395 INFO o.s.j.e.a.AnnotationMBeanExporter [restartedMain] Registering beans for JMX exposure on startup
+2020-01-10 13:19:52,408 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat started on port(s): 82 (http)
+2020-01-10 13:19:52,410 INFO f.t.c.App [restartedMain] Started App in 1.032 seconds (JVM running for 236.208)
+2020-01-10 13:19:59,190 INFO o.s.w.s.DispatcherServlet [http-nio-82-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2020-01-10 13:19:59,201 INFO o.s.w.s.DispatcherServlet [http-nio-82-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+2020-01-10 13:22:25,903 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [Thread-18] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c1c81: startup date [Fri Jan 10 13:19:51 CET 2020]; root of context hierarchy
+2020-01-10 13:22:25,909 INFO o.s.j.e.a.AnnotationMBeanExporter [Thread-18] Unregistering JMX-exposed beans on shutdown
+2020-01-10 13:22:25,913 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [Thread-18] Closing JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:22:26,417 INFO f.t.c.App [restartedMain] Starting App on LAPTOP-LKVNBR6U with PID 8752 (started by nabil in C:\Users\nabil\Desktop\FISE3\Archi N-Tiers\contratTelecom)
+2020-01-10 13:22:26,417 INFO f.t.c.App [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-10 13:22:26,419 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [restartedMain] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@109d8bd: startup date [Fri Jan 10 13:22:26 CET 2020]; root of context hierarchy
+2020-01-10 13:22:26,801 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat initialized with port(s): 82 (http)
+2020-01-10 13:22:26,859 INFO o.s.w.c.ContextLoader [localhost-startStop-1] Root WebApplicationContext: initialization completed in 440 ms
+2020-01-10 13:22:26,881 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2020-01-10 13:22:26,882 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-01-10 13:22:26,882 INFO o.s.b.w.s.FilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-10 13:22:26,902 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Building JPA container EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:22:26,982 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:22:27,107 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/index || /]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.accueil()
+2020-01-10 13:22:27,107 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageadmin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageAdminGet()
+2020-01-10 13:22:27,107 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageclient],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageClientGet()
+2020-01-10 13:22:27,107 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/entreprises],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.developpeurGet()
+2020-01-10 13:22:27,108 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/SignIn],methods=[POST]}" onto public org.springframework.web.servlet.view.RedirectView fr.telecom_st_etienne.contrat.controller.ContratController.connexion(java.lang.String,java.lang.String)
+2020-01-10 13:22:27,108 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscription],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.inscriptionGet()
+2020-01-10 13:22:27,108 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscriptionPost],methods=[POST]}" onto public org.springframework.web.servlet.view.RedirectView fr.telecom_st_etienne.contrat.controller.ContratController.inscriptionPost(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2020-01-10 13:22:27,109 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-10 13:22:27,110 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-10 13:22:27,117 INFO o.s.w.s.h.SimpleUrlHandlerMapping [restartedMain] Mapped URL path [/style/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-10 13:22:27,131 INFO o.s.w.s.m.m.a.RequestMappingHandlerAdapter [restartedMain] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@109d8bd: startup date [Fri Jan 10 13:22:26 CET 2020]; root of context hierarchy
+2020-01-10 13:22:27,228 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-01-10 13:22:27,243 INFO o.s.j.e.a.AnnotationMBeanExporter [restartedMain] Registering beans for JMX exposure on startup
+2020-01-10 13:22:27,253 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat started on port(s): 82 (http)
+2020-01-10 13:22:27,253 INFO f.t.c.App [restartedMain] Started App in 0.86 seconds (JVM running for 391.052)
+2020-01-10 13:22:32,661 INFO o.s.w.s.DispatcherServlet [http-nio-82-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2020-01-10 13:22:32,672 INFO o.s.w.s.DispatcherServlet [http-nio-82-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+2020-01-10 13:24:25,735 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [Thread-25] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@109d8bd: startup date [Fri Jan 10 13:22:26 CET 2020]; root of context hierarchy
+2020-01-10 13:24:25,739 INFO o.s.j.e.a.AnnotationMBeanExporter [Thread-25] Unregistering JMX-exposed beans on shutdown
+2020-01-10 13:24:25,741 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [Thread-25] Closing JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:24:26,192 INFO f.t.c.App [restartedMain] Starting App on LAPTOP-LKVNBR6U with PID 8752 (started by nabil in C:\Users\nabil\Desktop\FISE3\Archi N-Tiers\contratTelecom)
+2020-01-10 13:24:26,192 INFO f.t.c.App [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-10 13:24:26,194 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [restartedMain] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@da73e8: startup date [Fri Jan 10 13:24:26 CET 2020]; root of context hierarchy
+2020-01-10 13:24:26,559 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat initialized with port(s): 82 (http)
+2020-01-10 13:24:26,607 INFO o.s.w.c.ContextLoader [localhost-startStop-1] Root WebApplicationContext: initialization completed in 413 ms
+2020-01-10 13:24:26,626 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2020-01-10 13:24:26,627 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-01-10 13:24:26,627 INFO o.s.b.w.s.FilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-10 13:24:26,642 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Building JPA container EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:24:26,713 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:24:26,815 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/index || /]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.accueil()
+2020-01-10 13:24:26,815 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageadmin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageAdminGet()
+2020-01-10 13:24:26,815 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageclient],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageClientGet()
+2020-01-10 13:24:26,815 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/entreprises],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.developpeurGet()
+2020-01-10 13:24:26,815 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/SignIn],methods=[POST]}" onto public org.springframework.web.servlet.view.RedirectView fr.telecom_st_etienne.contrat.controller.ContratController.connexion(java.lang.String,java.lang.String)
+2020-01-10 13:24:26,815 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscription],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.inscriptionGet()
+2020-01-10 13:24:26,816 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscriptionPost],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.inscriptionPost(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2020-01-10 13:24:26,822 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-10 13:24:26,823 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-10 13:24:26,830 INFO o.s.w.s.h.SimpleUrlHandlerMapping [restartedMain] Mapped URL path [/style/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-10 13:24:26,842 INFO o.s.w.s.m.m.a.RequestMappingHandlerAdapter [restartedMain] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@da73e8: startup date [Fri Jan 10 13:24:26 CET 2020]; root of context hierarchy
+2020-01-10 13:24:26,926 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-01-10 13:24:26,937 INFO o.s.j.e.a.AnnotationMBeanExporter [restartedMain] Registering beans for JMX exposure on startup
+2020-01-10 13:24:26,946 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat started on port(s): 82 (http)
+2020-01-10 13:24:26,948 INFO f.t.c.App [restartedMain] Started App in 0.776 seconds (JVM running for 510.746)
+2020-01-10 13:24:32,273 INFO o.s.w.s.DispatcherServlet [http-nio-82-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2020-01-10 13:24:32,276 INFO o.s.w.s.DispatcherServlet [http-nio-82-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 3 ms
+2020-01-10 13:26:09,086 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [Thread-32] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@da73e8: startup date [Fri Jan 10 13:24:26 CET 2020]; root of context hierarchy
+2020-01-10 13:26:09,093 INFO o.s.j.e.a.AnnotationMBeanExporter [Thread-32] Unregistering JMX-exposed beans on shutdown
+2020-01-10 13:26:09,096 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [Thread-32] Closing JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:26:09,528 INFO f.t.c.App [restartedMain] Starting App on LAPTOP-LKVNBR6U with PID 8752 (started by nabil in C:\Users\nabil\Desktop\FISE3\Archi N-Tiers\contratTelecom)
+2020-01-10 13:26:09,528 INFO f.t.c.App [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-10 13:26:09,530 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [restartedMain] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fecd1d: startup date [Fri Jan 10 13:26:09 CET 2020]; root of context hierarchy
+2020-01-10 13:26:09,891 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat initialized with port(s): 82 (http)
+2020-01-10 13:26:09,946 INFO o.s.w.c.ContextLoader [localhost-startStop-1] Root WebApplicationContext: initialization completed in 416 ms
+2020-01-10 13:26:09,966 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2020-01-10 13:26:09,967 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-01-10 13:26:09,967 INFO o.s.b.w.s.FilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-10 13:26:09,987 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Building JPA container EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:26:10,083 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:26:10,219 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/index || /]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.accueil()
+2020-01-10 13:26:10,219 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageadmin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageAdminGet()
+2020-01-10 13:26:10,219 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageclient],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageClientGet()
+2020-01-10 13:26:10,220 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/entreprises],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.developpeurGet()
+2020-01-10 13:26:10,220 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/SignIn],methods=[POST]}" onto public org.springframework.web.servlet.view.RedirectView fr.telecom_st_etienne.contrat.controller.ContratController.connexion(java.lang.String,java.lang.String)
+2020-01-10 13:26:10,220 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscription],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.inscriptionGet()
+2020-01-10 13:26:10,221 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscriptionPost],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.inscriptionPost(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2020-01-10 13:26:10,223 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-10 13:26:10,223 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-10 13:26:10,232 INFO o.s.w.s.h.SimpleUrlHandlerMapping [restartedMain] Mapped URL path [/style/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-10 13:26:10,246 INFO o.s.w.s.m.m.a.RequestMappingHandlerAdapter [restartedMain] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fecd1d: startup date [Fri Jan 10 13:26:09 CET 2020]; root of context hierarchy
+2020-01-10 13:26:10,345 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-01-10 13:26:10,359 INFO o.s.j.e.a.AnnotationMBeanExporter [restartedMain] Registering beans for JMX exposure on startup
+2020-01-10 13:26:10,369 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat started on port(s): 82 (http)
+2020-01-10 13:26:10,370 INFO f.t.c.App [restartedMain] Started App in 0.864 seconds (JVM running for 614.169)
+2020-01-10 13:26:16,633 INFO o.s.w.s.DispatcherServlet [http-nio-82-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2020-01-10 13:26:16,639 INFO o.s.w.s.DispatcherServlet [http-nio-82-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+2020-01-10 13:28:27,446 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [Thread-39] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fecd1d: startup date [Fri Jan 10 13:26:09 CET 2020]; root of context hierarchy
+2020-01-10 13:28:27,448 INFO o.s.j.e.a.AnnotationMBeanExporter [Thread-39] Unregistering JMX-exposed beans on shutdown
+2020-01-10 13:28:27,448 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [Thread-39] Closing JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:28:27,865 INFO f.t.c.App [restartedMain] Starting App on LAPTOP-LKVNBR6U with PID 8752 (started by nabil in C:\Users\nabil\Desktop\FISE3\Archi N-Tiers\contratTelecom)
+2020-01-10 13:28:27,865 INFO f.t.c.App [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-10 13:28:27,868 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [restartedMain] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1cee80c: startup date [Fri Jan 10 13:28:27 CET 2020]; root of context hierarchy
+2020-01-10 13:28:28,262 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat initialized with port(s): 82 (http)
+2020-01-10 13:28:28,319 INFO o.s.w.c.ContextLoader [localhost-startStop-1] Root WebApplicationContext: initialization completed in 450 ms
+2020-01-10 13:28:28,341 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2020-01-10 13:28:28,341 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-01-10 13:28:28,342 INFO o.s.b.w.s.FilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-10 13:28:28,361 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Building JPA container EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:28:28,438 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:28:28,566 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/index || /]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.accueil()
+2020-01-10 13:28:28,567 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageadmin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageAdminGet()
+2020-01-10 13:28:28,567 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageclient],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageClientGet()
+2020-01-10 13:28:28,567 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/entreprises],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.developpeurGet()
+2020-01-10 13:28:28,567 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/SignIn],methods=[POST]}" onto public org.springframework.web.servlet.view.RedirectView fr.telecom_st_etienne.contrat.controller.ContratController.connexion(java.lang.String,java.lang.String)
+2020-01-10 13:28:28,567 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscription],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.inscriptionGet()
+2020-01-10 13:28:28,567 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscriptionPost],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.inscriptionPost(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2020-01-10 13:28:28,569 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-10 13:28:28,569 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-10 13:28:28,578 INFO o.s.w.s.h.SimpleUrlHandlerMapping [restartedMain] Mapped URL path [/style/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-10 13:28:28,592 INFO o.s.w.s.m.m.a.RequestMappingHandlerAdapter [restartedMain] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1cee80c: startup date [Fri Jan 10 13:28:27 CET 2020]; root of context hierarchy
+2020-01-10 13:28:28,688 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-01-10 13:28:28,704 INFO o.s.j.e.a.AnnotationMBeanExporter [restartedMain] Registering beans for JMX exposure on startup
+2020-01-10 13:28:28,714 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat started on port(s): 82 (http)
+2020-01-10 13:28:28,716 INFO f.t.c.App [restartedMain] Started App in 0.899 seconds (JVM running for 752.514)
+2020-01-10 13:28:36,723 INFO o.s.w.s.DispatcherServlet [http-nio-82-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2020-01-10 13:28:36,735 INFO o.s.w.s.DispatcherServlet [http-nio-82-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+2020-01-10 13:35:08,444 INFO f.t.c.App [restartedMain] Starting App on LAPTOP-LKVNBR6U with PID 4996 (started by nabil in C:\Users\nabil\Desktop\FISE3\Archi N-Tiers\contratTelecom)
+2020-01-10 13:35:08,451 INFO f.t.c.App [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-10 13:35:08,491 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [restartedMain] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1f4c988: startup date [Fri Jan 10 13:35:08 CET 2020]; root of context hierarchy
+2020-01-10 13:35:09,908 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat initialized with port(s): 82 (http)
+2020-01-10 13:35:10,119 INFO o.s.w.c.ContextLoader [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1629 ms
+2020-01-10 13:35:10,212 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2020-01-10 13:35:10,213 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-01-10 13:35:10,215 INFO o.s.b.w.s.FilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-10 13:35:10,298 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Building JPA container EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:35:11,577 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:35:12,148 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/SignIn],methods=[POST]}" onto public org.springframework.web.servlet.view.RedirectView fr.telecom_st_etienne.contrat.controller.ContratController.connexion(java.lang.String,java.lang.String)
+2020-01-10 13:35:12,148 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageadmin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageAdminGet()
+2020-01-10 13:35:12,149 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscriptionPost],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.inscriptionPost(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2020-01-10 13:35:12,149 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/entreprises],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.developpeurGet()
+2020-01-10 13:35:12,149 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscription],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.inscriptionGet()
+2020-01-10 13:35:12,149 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageclient],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageClientGet()
+2020-01-10 13:35:12,149 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/index || /]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.accueil()
+2020-01-10 13:35:12,152 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-10 13:35:12,153 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-10 13:35:12,183 INFO o.s.w.s.h.SimpleUrlHandlerMapping [restartedMain] Mapped URL path [/style/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-10 13:35:12,228 INFO o.s.w.s.m.m.a.RequestMappingHandlerAdapter [restartedMain] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1f4c988: startup date [Fri Jan 10 13:35:08 CET 2020]; root of context hierarchy
+2020-01-10 13:35:12,575 WARN o.s.b.d.a.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2020-01-10 13:35:12,601 INFO o.s.j.e.a.AnnotationMBeanExporter [restartedMain] Registering beans for JMX exposure on startup
+2020-01-10 13:35:12,655 INFO o.s.b.a.l.AutoConfigurationReportLoggingInitializer [restartedMain] 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2020-01-10 13:35:12,656 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 82 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 82, or configure this application to listen on another port.
+
+2020-01-10 13:35:12,657 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [restartedMain] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1f4c988: startup date [Fri Jan 10 13:35:08 CET 2020]; root of context hierarchy
+2020-01-10 13:35:12,658 INFO o.s.j.e.a.AnnotationMBeanExporter [restartedMain] Unregistering JMX-exposed beans on shutdown
+2020-01-10 13:35:12,660 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:35:36,781 INFO f.t.c.App [restartedMain] Starting App on LAPTOP-LKVNBR6U with PID 36524 (started by nabil in C:\Users\nabil\Desktop\FISE3\Archi N-Tiers\contratTelecom)
+2020-01-10 13:35:36,787 INFO f.t.c.App [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-10 13:35:36,829 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [restartedMain] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@106128b: startup date [Fri Jan 10 13:35:36 CET 2020]; root of context hierarchy
+2020-01-10 13:35:38,108 INFO o.s.b.c.e.t.TomcatEmbeddedServletContainer [restartedMain] Tomcat initialized with port(s): 82 (http)
+2020-01-10 13:35:38,309 INFO o.s.w.c.ContextLoader [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1484 ms
+2020-01-10 13:35:38,397 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2020-01-10 13:35:38,398 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'webServlet' to [/h2-console/*]
+2020-01-10 13:35:38,400 INFO o.s.b.w.s.FilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-10 13:35:38,487 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Building JPA container EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:35:39,677 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'entityManagerFactory'
+2020-01-10 13:35:40,317 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscription],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.inscriptionGet()
+2020-01-10 13:35:40,318 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/entreprises],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.developpeurGet()
+2020-01-10 13:35:40,318 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageclient],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageClientGet()
+2020-01-10 13:35:40,318 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/pageadmin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.pageAdminGet()
+2020-01-10 13:35:40,319 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/SignIn],methods=[POST]}" onto public org.springframework.web.servlet.view.RedirectView fr.telecom_st_etienne.contrat.controller.ContratController.connexion(java.lang.String,java.lang.String)
+2020-01-10 13:35:40,319 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/inscriptionPost],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.inscriptionPost(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2020-01-10 13:35:40,319 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/index || /]}" onto public org.springframework.web.servlet.ModelAndView fr.telecom_st_etienne.contrat.controller.ContratController.accueil()
+2020-01-10 13:35:40,322 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-10 13:35:40,323 INFO o.s.w.s.m.m.a.RequestMappingHandlerMapping [restartedMain] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-10 13:35:40,352 INFO o.s.w.s.h.SimpleUrlHandlerMapping [restartedMain] Mapped URL path [/style/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-10 13:35:40,395 INFO o.s.w.s.m.m.a.RequestMappingHandlerAdapter [restartedMain] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@106128b: startup date [Fri Jan 10 13:35:36 CET 2020]; root of context hierarchy
+2020-01-10 13:35:40,857 WARN o.s.b.d.a.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2020-01-10 13:35:40,913 INFO o.s.j.e.a.AnnotationMBeanExporter [restartedMain] Registering beans for JMX exposure on startup
+2020-01-10 13:35:40,961 INFO o.s.b.a.l.AutoConfigurationReportLoggingInitializer [restartedMain] 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2020-01-10 13:35:40,962 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 82 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 82, or configure this application to listen on another port.
+
+2020-01-10 13:35:40,963 INFO o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [restartedMain] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@106128b: startup date [Fri Jan 10 13:35:36 CET 2020]; root of context hierarchy
+2020-01-10 13:35:40,964 INFO o.s.j.e.a.AnnotationMBeanExporter [restartedMain] Unregistering JMX-exposed beans on shutdown
+2020-01-10 13:35:40,965 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'entityManagerFactory'

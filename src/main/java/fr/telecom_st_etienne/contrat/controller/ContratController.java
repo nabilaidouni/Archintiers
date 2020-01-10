@@ -117,15 +117,24 @@ public class ContratController {
 		
 	}
 	
-	@PostMapping("inscription")
-	public RedirectView inscription(@RequestParam("NOM") String nom, @RequestParam("IDENTIFIANT") String identifiant, @RequestParam("MOT_DE_PASSE") String mdp, @RequestParam("CODE_ADMIN") String codeAdmin) {
-		if(codeAdmin == "admin") {
+	@GetMapping("inscription")
+	public ModelAndView inscriptionGet() {
+		ModelAndView mav = new ModelAndView("inscription");
+		mav.addObject("clients",clientService.recupererClients());
+		mav.addObject("contrats",contratService.recupererContrats());
+		mav.addObject("entreprises", entrepriseService.recupererEntreprises());
+		return mav;
+	}
+	
+	@PostMapping("inscriptionPost")
+	public ModelAndView inscriptionPost(@RequestParam("NOM") String nom, @RequestParam("IDENTIFIANT") String identifiant, @RequestParam("MOT_DE_PASSE") String mdp, @RequestParam("CODE_ADMIN") String codeAdmin) {
+		if(codeAdmin.equals("admin")) {
 			clientService.ajouterClient(nom, identifiant, mdp, true);
 		}
 		else {
 			clientService.ajouterClient(nom, identifiant, mdp, false);
 		}
-		return new RedirectView("index");
+		return new ModelAndView("redirect:/");
 	}
 	
 	@GetMapping("entreprises")
