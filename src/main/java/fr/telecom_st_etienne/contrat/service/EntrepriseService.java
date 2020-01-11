@@ -7,7 +7,7 @@ import fr.telecom_st_etienne.contrat.business.Entreprise;
 
 public interface EntrepriseService {
 	
-	Entreprise ajouterEntreprise(String nom, String adresse, String siret, List<Contrat> contrats);
+	Entreprise ajouterEntreprise(String nom, String adresse, String siret);
 	
 	List<Entreprise> recupererEntreprises();
 

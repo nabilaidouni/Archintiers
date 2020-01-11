@@ -27,6 +27,7 @@ public class ContratServiceImpl implements ContratService{
 		contrat.setCommentaire(commentaire);
 		contrat.setLienPdf(lienPdf);
 		contrat.setDateSoumission(dateSoumission);
+		contrat.setValide(false);
 		contrat.setEntreprise(entreprise);
 		contratDAO.save(contrat);
 		return contrat;
@@ -42,6 +43,12 @@ public class ContratServiceImpl implements ContratService{
 	public Contrat recupererContrat(Long id) {
 		// TODO Auto-generated method stub
 		return contratDAO.findOne(id);
+	}
+	
+	@Override
+	public Contrat validerContrat(Contrat contrat) {
+		contrat.setValide(true);
+		return contratDAO.save(contrat);
 	}
 	
 	@Override

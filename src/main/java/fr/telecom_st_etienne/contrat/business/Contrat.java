@@ -27,6 +27,8 @@ public class Contrat {
 	
 	private Date dateSoumission;
 	
+	private Boolean valide;
+	
 	@ManyToOne
 	private Entreprise entreprise;
 	
@@ -80,5 +82,13 @@ public class Contrat {
 
 	public void setEntreprise(Entreprise entreprise) {
 		this.entreprise = entreprise;
+	}
+
+	public Boolean getValide() {
+		return valide;
+	}
+
+	public void setValide(Boolean valide) {
+		this.valide = valide;
 	}
 }

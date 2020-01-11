@@ -18,13 +18,12 @@ public class EntrepriseServiceImpl implements EntrepriseService {
 	private EntrepriseDao entrepriseDAO;
 	
 	@Override
-	public Entreprise ajouterEntreprise(String nom, String adresse, String siret, List<Contrat> contrats) {
+	public Entreprise ajouterEntreprise(String nom, String adresse, String siret) {
 		// TODO Auto-generated method stub
 		Entreprise entreprise = new Entreprise();
 		entreprise.setNom(nom);
 		entreprise.setAdresse(adresse);
 		entreprise.setSiret(siret);
-		entreprise.setContrat(contrats);
 		entrepriseDAO.save(entreprise);
 		return entreprise;
 	}

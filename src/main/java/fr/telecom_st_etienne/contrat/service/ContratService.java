@@ -15,6 +15,8 @@ public interface ContratService {
 
 	Contrat recupererContrat(Long id);
 	
+	Contrat validerContrat(Contrat contrat);
+	
 	void supprimerContrat(Long id);
 
 }
