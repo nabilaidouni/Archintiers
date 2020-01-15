@@ -17,6 +17,8 @@ public interface ContratService {
 	
 	Contrat validerContrat(Contrat contrat);
 	
+	Contrat mettreAJourContrat(Contrat contrat, Entreprise entreprise, String commentaire, String lienPdf);
+	
 	void supprimerContrat(Contrat contrat);
 
 }

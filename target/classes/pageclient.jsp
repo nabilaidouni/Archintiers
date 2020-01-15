@@ -39,7 +39,7 @@
 		</c:if>
 		<c:if test="${clientConnecte.contrat ne null}">
 			<td>
-				<p><a href="putanddelete?ID_CONTRAT=${clientConnecte.contrat.id}">Modifier mon contrat</a></p> <p><a data-method="delete" href="putanddelete?ID_CONTRAT=${clientConnecte.contrat.id}&IDENTIFIANT_CLIENT=${clientConnecte.identifiant}&METHOD_SELECTED=2">Supprimer mon contrat</a></p>
+				<p><a href="contratmaj?ID_CLIENT=${clientConnecte.id}">Modifier mon contrat</a></p> <p><a data-method="delete" href="putanddelete?ID_CONTRAT=${clientConnecte.contrat.id}&IDENTIFIANT_CLIENT=${clientConnecte.identifiant}&METHOD_SELECTED=2">Supprimer mon contrat</a></p>
 			</td>
 		</c:if>
 </body>

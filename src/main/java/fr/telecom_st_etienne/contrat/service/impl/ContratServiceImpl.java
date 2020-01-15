@@ -51,6 +51,17 @@ public class ContratServiceImpl implements ContratService{
 	}
 	
 	@Override
+	public Contrat mettreAJourContrat(Contrat contrat, Entreprise entreprise, String commentaire, String lienPdf) {
+		contrat.setCommentaire(commentaire);
+		contrat.setLienPdf(lienPdf);
+		contrat.setDateSoumission(new Date());
+		contrat.setValide(false);
+		contrat.setEntreprise(entreprise);
+		contratDAO.save(contrat);
+		return contrat;
+	}
+	
+	@Override
 	public void supprimerContrat(Contrat contrat) {
 		
 		contratDAO.delete(contrat.getId());
