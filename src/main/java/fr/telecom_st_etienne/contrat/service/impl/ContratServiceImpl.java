@@ -20,10 +20,9 @@ public class ContratServiceImpl implements ContratService{
 	private ContratDao contratDAO;
 	
 	@Override
-	public Contrat ajouterContrat(Client client, String commentaire, String lienPdf, Date dateSoumission, Entreprise entreprise) {
+	public Contrat ajouterContrat(String commentaire, String lienPdf, Date dateSoumission, Entreprise entreprise) {
 		// TODO Auto-generated method stub
 		Contrat contrat = new Contrat();
-		contrat.setClient(client);
 		contrat.setCommentaire(commentaire);
 		contrat.setLienPdf(lienPdf);
 		contrat.setDateSoumission(dateSoumission);
@@ -52,8 +51,9 @@ public class ContratServiceImpl implements ContratService{
 	}
 	
 	@Override
-	public void supprimerContrat(Long id) {
-		contratDAO.delete(id);
+	public void supprimerContrat(Contrat contrat) {
+		
+		contratDAO.delete(contrat.getId());
 	}
 
 }

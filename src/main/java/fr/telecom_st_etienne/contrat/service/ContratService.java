@@ -9,7 +9,7 @@ import fr.telecom_st_etienne.contrat.business.Entreprise;
 
 public interface ContratService {
 	
-	Contrat ajouterContrat(Client client, String commentaire, String lienPdf, Date dateSoumission, Entreprise entreprise);
+	Contrat ajouterContrat(String commentaire, String lienPdf, Date dateSoumission, Entreprise entreprise);
 	
 	List<Contrat> recupererContrats();
 
@@ -17,6 +17,6 @@ public interface ContratService {
 	
 	Contrat validerContrat(Contrat contrat);
 	
-	void supprimerContrat(Long id);
+	void supprimerContrat(Contrat contrat);
 
 }

@@ -8,7 +8,9 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,6 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
 import fr.telecom_st_etienne.contrat.business.Client;
+import fr.telecom_st_etienne.contrat.business.Contrat;
 import fr.telecom_st_etienne.contrat.service.ClientService;
 import fr.telecom_st_etienne.contrat.service.ContratService;
 import fr.telecom_st_etienne.contrat.service.EntrepriseService;
@@ -50,11 +53,19 @@ public class ContratController {
 	@PostConstruct
 	public void init() {
 		System.out.println("Dans init()");
+		
+		if(contratService.recupererContrats().isEmpty()) {
+			contratService.ajouterContrat("Developpeur JAVA","coco.pdf", new Date(), entrepriseService.recupererEntreprise(1L));
+			contratService.ajouterContrat("Developpeur C","caca.pdf", new Date(), entrepriseService.recupererEntreprise(2L));
+			contratService.ajouterContrat("Developpeur Ruby","cucu.pdf", new Date(), entrepriseService.recupererEntreprise(3L));
+			contratService.ajouterContrat("Developpeur Python","cici.pdf", new Date(), entrepriseService.recupererEntreprise(4L));
+		}
+		
 		if(clientService.recupererClients().isEmpty()) {
-			clientService.ajouterClient("Thales","thales","thales", true);
-			clientService.ajouterClient("Pythagore","pythagore","pythagore", false);
-			clientService.ajouterClient("Laplace","laplace","laplace", false);
-			clientService.ajouterClient("Bayes","bayes","bayes", false);
+			clientService.ajouterClient(contratService.recupererContrat(1L),"Thales","thales","thales", true);
+			clientService.ajouterClient(contratService.recupererContrat(2L),"Pythagore","pythagore","pythagore", false);
+			clientService.ajouterClient(contratService.recupererContrat(3L),"Laplace","laplace","laplace", false);
+			clientService.ajouterClient(contratService.recupererContrat(4L),"Bayes","bayes","bayes", false);
 		}
 		if(entrepriseService.recupererEntreprises().isEmpty()) {
 			entrepriseService.ajouterEntreprise("Andrice","12 rue Andrice","0000001");
@@ -67,12 +78,6 @@ public class ContratController {
 			entrepriseService.ajouterEntreprise("Hasbro","12 rue Hasbro","0000008");
 			entrepriseService.ajouterEntreprise("Iris","12 rue Iris","0000009");
 			entrepriseService.ajouterEntreprise("Jdbc","12 rue Jdbc","0000010");
-		}
-		if(contratService.recupererContrats().isEmpty()) {
-			contratService.ajouterContrat(clientService.recupererClient(1L),"Developpeur JAVA","coco.pdf", new Date(), entrepriseService.recupererEntreprise(1L));
-			contratService.ajouterContrat(clientService.recupererClient(2L),"Developpeur C","caca.pdf", new Date(), entrepriseService.recupererEntreprise(2L));
-			contratService.ajouterContrat(clientService.recupererClient(3L),"Developpeur Ruby","cucu.pdf", new Date(), entrepriseService.recupererEntreprise(3L));
-			contratService.ajouterContrat(clientService.recupererClient(4L),"Developpeur Python","cici.pdf", new Date(), entrepriseService.recupererEntreprise(4L));
 		}
 	}
 	
@@ -110,8 +115,9 @@ public class ContratController {
 	
 	@GetMapping("pageclient")
 	public ModelAndView pageClientGet(@RequestParam("IDENTIFIANT_CLIENT") String identifiant) {
-
+		
 		ModelAndView mav = new ModelAndView("pageclient");
+		mav.addObject("clientConnecte",clientService.recupererClient(identifiant));
 		mav.addObject("clients",clientService.recupererClients());
 		mav.addObject("contrats",contratService.recupererContrats());
 		mav.addObject("entreprises", entrepriseService.recupererEntreprises());
@@ -132,10 +138,10 @@ public class ContratController {
 	public ModelAndView inscriptionPost(@RequestParam("NOM") String nom, @RequestParam("IDENTIFIANT") String identifiant, @RequestParam("MOT_DE_PASSE") String mdp, @RequestParam("CODE_ADMIN") String codeAdmin) {
 		if(clientService.recupererClient(identifiant) == null) {
 			if(codeAdmin.equals("admin")) {
-				clientService.ajouterClient(nom, identifiant, mdp, true);
+				clientService.ajouterClient(null, nom, identifiant, mdp, true);
 			}
 			else {
-				clientService.ajouterClient(nom, identifiant, mdp, false);
+				clientService.ajouterClient(null, nom, identifiant, mdp, false);
 			}
 			return new ModelAndView("redirect:/");
 		}
@@ -151,15 +157,54 @@ public class ContratController {
 			return new ModelAndView("redirect:/pageadmin");
 	}
 	
-	@GetMapping("entreprises")
-	public ModelAndView developpeurGet() {
+	@GetMapping("contrat")
+	public ModelAndView contratGet(@RequestParam("ID_CLIENT") Long idClient) {
 		
-		ModelAndView mav = new ModelAndView("entreprises");
+		ModelAndView mav = new ModelAndView("contrat");
+		mav.addObject("clientConnecte",clientService.recupererClient(idClient));
+		mav.addObject("contrats",contratService.recupererContrats());
+		mav.addObject("entreprises",entrepriseService.recupererEntreprises());
 		return mav;
 		
 	}
 	
+	@PostMapping("newContratPost")
+	public ModelAndView newContratPost(@RequestParam("IDENTIFIANT_CLIENT") String idClient, @RequestParam("ID_ENTREPRISE") Long idEntreprise, @RequestParam("COMMENTAIRE") String commentaire, @RequestParam("LIEN_PDF") String lienPdf) {
+		
+		clientService.obtenirContrat(clientService.recupererClient(idClient), contratService.ajouterContrat(commentaire, lienPdf, new Date(), entrepriseService.recupererEntreprise(idEntreprise)));	
+		return new ModelAndView("redirect:/pageclient?IDENTIFIANT_CLIENT=" + idClient);
+	}
+	
 	public void initBinder() {
+		
+	}
+	
+	@GetMapping("contratmaj")
+	public ModelAndView contratMajGet(@RequestParam("ID_CONTRAT") Long idContrat) {
+		
+		ModelAndView mav = new ModelAndView("contratmaj");
+		mav.addObject("contrats",contratService.recupererContrats());
+		mav.addObject("entreprises",entrepriseService.recupererEntreprises());
+		return mav;
+		
+	}
+	
+	@GetMapping("putanddelete")
+	public RedirectView putAndDeleteGet(@RequestParam("ID_CONTRAT") Long idContrat, @RequestParam("IDENTIFIANT_CLIENT") String idClient, @RequestParam("METHOD_SELECTED") Long method) {
+		if(method == 2) {
+			contratDelete(idContrat, idClient);
+			return new RedirectView("pageclient?IDENTIFIANT_CLIENT=" + idClient);
+		}
+		else {
+			contratDelete(idContrat, idClient);
+			return new RedirectView("pageclient?IDENTIFIANT_CLIENT=" + idClient);
+		}
+	}
+	
+	@DeleteMapping("contratDelete")
+	public void contratDelete(@RequestParam("ID_CONTRAT") Long idContrat, @RequestParam("IDENTIFIANT_CLIENT") String idClient ) {
+		clientService.retirerContrat(clientService.recupererClient(idClient));
+		contratService.supprimerContrat(contratService.recupererContrat(idContrat));
 		
 	}
 	

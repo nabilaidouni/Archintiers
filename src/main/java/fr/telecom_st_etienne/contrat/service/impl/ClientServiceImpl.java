@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import fr.telecom_st_etienne.contrat.business.Client;
+import fr.telecom_st_etienne.contrat.business.Contrat;
 import fr.telecom_st_etienne.contrat.dao.ClientDao;
 import fr.telecom_st_etienne.contrat.service.ClientService;
 
@@ -17,9 +18,10 @@ public class ClientServiceImpl implements ClientService {
 	private ClientDao clientDAO;
 	
 	@Override
-	public Client ajouterClient(String nom,String identifiant, String mdp, Boolean admin) {
+	public Client ajouterClient(Contrat contrat, String nom,String identifiant, String mdp, Boolean admin) {
 		// TODO Auto-generated method stub
 		Client client = new Client();
+		client.setContrat(contrat);
 		client.setNom(nom);
 		client.setIdentifiant(identifiant);
 		client.setMdp(mdp);
@@ -42,6 +44,18 @@ public class ClientServiceImpl implements ClientService {
 	
 	public Client recupererClient(String identifiant) {
 		return clientDAO.findClientByIdentifiant(identifiant);
+	}
+	
+	@Override
+	public Client obtenirContrat(Client client, Contrat contrat) {
+		client.setContrat(contrat);
+		return clientDAO.save(client);
+	}
+	
+	@Override
+	public Client retirerContrat(Client client) {
+		client.setContrat(null);
+		return clientDAO.save(client);
 	}
 	
 	@Override

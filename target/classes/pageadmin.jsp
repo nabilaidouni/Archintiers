@@ -9,12 +9,11 @@
 <link href="style/theme1.css" rel="stylesheet">
 </head>
 <body>
-	<h1>Bonjour Admin</h1>
+	<h1>Bonjour et bienvenue sur l'interface d'administration</h1>
 	<c:if test="${contrats.isEmpty() eq false}">
 		<table>
 			<c:forEach items="${contrats}" var="contrat">
 				<tr>
-					<td><p>${contrat.client.nom}</p></td>
 				  	<td><p>${contrat.commentaire}</p></td>
 					<td><p>${contrat.lienPdf}</p></td>
 					<td><p>${contrat.entreprise.nom}</p></td>

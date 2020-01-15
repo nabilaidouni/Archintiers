@@ -2,12 +2,16 @@ package fr.telecom_st_etienne.contrat.business;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Client {
@@ -24,6 +28,9 @@ public class Client {
 	private String mdp;
 	
 	private Boolean admin;
+	
+	@OneToOne
+	private Contrat contrat;
 	
 	public Client() {
 		
@@ -67,5 +74,13 @@ public class Client {
 
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
+	}
+
+	public Contrat getContrat() {
+		return contrat;
+	}
+
+	public void setContrat(Contrat contrat) {
+		this.contrat = contrat;
 	}
 }
