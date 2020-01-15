@@ -30,6 +30,7 @@
 						</c:forEach>
 					</select>
 				</td>
+				<td><a href="entreprises?IDENTIFIANT_CLIENT=${clientConnecte.identifiant}&PAGE_PRECEDENTE=2">+</a></td>
 				<td><input type="text" name="IDENTIFIANT_CLIENT" value="${clientConnecte.identifiant}" style="display: none;" /></td>
 			</tr>
 			<tr>

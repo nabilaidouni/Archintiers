@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -160,7 +161,7 @@ public class ContratController {
 	}
 	
 	@GetMapping("contrat")
-	public ModelAndView contratGet(@RequestParam("ID_CLIENT") Long idClient) {
+	public ModelAndView contratGet(@RequestParam("IDENTIFIANT_CLIENT") String idClient) {
 		
 		ModelAndView mav = new ModelAndView("contrat");
 		mav.addObject("clientConnecte",clientService.recupererClient(idClient));
@@ -192,7 +193,7 @@ public class ContratController {
 	}
 	
 	@GetMapping("contratmaj")
-	public ModelAndView contratMajGet(@RequestParam("ID_CLIENT") Long idClient) {
+	public ModelAndView contratMajGet(@RequestParam("IDENTIFIANT_CLIENT") String idClient) {
 		
 		ModelAndView mav = new ModelAndView("contratmaj");
 		mav.addObject("clientConnecte",clientService.recupererClient(idClient));
@@ -219,6 +220,28 @@ public class ContratController {
 		clientService.retirerContrat(clientService.recupererClient(idClient));
 		contratService.supprimerContrat(contratService.recupererContrat(idContrat));
 		
+	}
+	
+	@GetMapping("entreprises")
+	public ModelAndView entrepriseGet(@RequestParam("IDENTIFIANT_CLIENT") String idClient, @RequestParam("PAGE_PRECEDENTE") Long pp) {
+		
+		ModelAndView mav = new ModelAndView("entreprises");
+		mav.addObject("clientConnecte",clientService.recupererClient(idClient));
+		mav.addObject("pagePrecedente", pp);
+		mav.addObject("entreprises",entrepriseService.recupererEntreprises());
+		return mav;
+	}
+	
+	@PostMapping("newEntreprisePost")
+	public ModelAndView newEntreprisePost(@RequestParam("IDENTIFIANT_CLIENT") String idClient, @RequestParam("PAGE_PRECEDENTE") Long pp, @RequestParam("NOM") String nom, @RequestParam("ADRESSE") String adresse, @RequestParam("SIRET") String siret) {
+		
+		entrepriseService.ajouterEntreprise(nom, adresse, siret);
+		if(pp == 1) {
+			return new ModelAndView("redirect:/contrat?IDENTIFIANT_CLIENT=" + idClient);
+		}
+		else {
+			return new ModelAndView("redirect:/contratmaj?IDENTIFIANT_CLIENT=" + idClient);
+		}
 	}
 	
 }

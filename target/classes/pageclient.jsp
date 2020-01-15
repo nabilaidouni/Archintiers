@@ -34,12 +34,12 @@
 		</table>
 		<c:if test="${clientConnecte.contrat eq null}">
 			<td>
-				<p><a href="contrat?ID_CLIENT=${clientConnecte.id}">Ajouter un contrat</a></p>
+				<p><a href="contrat?IDENTIFIANT_CLIENT=${clientConnecte.identifiant}">Ajouter un contrat</a></p>
 			</td>
 		</c:if>
 		<c:if test="${clientConnecte.contrat ne null}">
 			<td>
-				<p><a href="contratmaj?ID_CLIENT=${clientConnecte.id}">Modifier mon contrat</a></p> <p><a data-method="delete" href="putanddelete?ID_CONTRAT=${clientConnecte.contrat.id}&IDENTIFIANT_CLIENT=${clientConnecte.identifiant}&METHOD_SELECTED=2">Supprimer mon contrat</a></p>
+				<p><a href="contratmaj?IDENTIFIANT_CLIENT=${clientConnecte.identifiant}">Modifier mon contrat</a></p> <p><a data-method="delete" href="putanddelete?ID_CONTRAT=${clientConnecte.contrat.id}&IDENTIFIANT_CLIENT=${clientConnecte.identifiant}&METHOD_SELECTED=2">Supprimer mon contrat</a></p>
 			</td>
 		</c:if>
 </body>
