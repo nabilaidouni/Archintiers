@@ -42,17 +42,28 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<archive>
+						<manifest>
+							<mainClass>fr.telecom_st_etienne.contrat.App</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
 
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
 			</plugin>
 		</plugins>
 	</build>
-
-
+	
 	<dependencies>
 
 		<dependency>
@@ -118,7 +129,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>5.2.2.Final</version>
+			<version>6.0.4.Final</version>
 		</dependency>
 
 		<dependency>
