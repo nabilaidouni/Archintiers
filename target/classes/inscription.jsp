@@ -16,9 +16,8 @@
 <title>Inscription</title>
 </head>
 	<body>
-		<h1>Sign Up : </h1>
+		<div class="text-center"><h1 class="display-1">Inscription</h1></div>
 		<div class= "container">
-		<h2>Bienvenue sur le portail de connexion ContratTelecom</h2>
 		</div>
 		
 		<form  action="inscriptionPost" method="post" class="container rounded">

@@ -17,11 +17,7 @@
    <!--<script type="text/javascript">$(document).ready(function() {$('#tableau').DataTable({"pageLength": 4} );} );</script>-->
 	</head>
 	<body>
-		<table width="100%">
-			<tr>
-				<td><h1>Sign In : </h1></td>
-			</tr>
-		</table>
+		<div class="text-center"><h1 class="display-1">Connection</h1></div>
 		<form  action="SignIn" method="post" class="container rounded">
 		  <div class="form-group">
 		    <label for="identifiant">Identifiant:</label>

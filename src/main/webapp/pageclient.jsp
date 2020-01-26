@@ -21,7 +21,7 @@
 	  <a class="navbar-brand" href="index">Deconnexion</a>
 	</nav>
 	<h1>Bonjour ${clientConnecte.nom}</h1>
-		<table>
+		<table class="table table-striped">
 			<c:if test="${clientConnecte.contrat eq null}">
 				<td>
 					<p>Vous n'avez pas encore fait de demande de contrat.</p>
@@ -29,16 +29,20 @@
 			</c:if>
 			<c:if test="${clientConnecte.contrat ne null}">
 				<tr>
-				  	<td><p> ${clientConnecte.contrat.commentaire} </p></td>
-					<td><p> ${clientConnecte.contrat.lienPdf} </p></td>
-					<td><p> ${clientConnecte.contrat.entreprise.nom} </p></td>
+					<th>Contrat Professionnel</th>
+					<th>detail du contrat (pdf)</th>
+					<th>Entreprise</th>
+					<th>Status de la demande</th>
+				</tr>
+				<tr>
+				  	<td>${clientConnecte.contrat.commentaire}</td>
+					<td>${clientConnecte.contrat.lienPdf}</td>
+					<td>${clientConnecte.contrat.entreprise.nom}</td>
 					<c:if test="${clientConnecte.contrat.valide eq true}">
 						<td><img src="style/valide.png"/></td>
 					</c:if>
 					<c:if test="${clientConnecte.contrat.valide eq false}">
-						<td>
-							<p>En attente de validation</p>
-						</td>
+						<td>En attente de validation</td>
 					</c:if>
 				</tr>
 			</c:if>
