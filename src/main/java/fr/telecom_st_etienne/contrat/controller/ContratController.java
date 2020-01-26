@@ -56,6 +56,11 @@ public class ContratController {
 	public void init() {
 		System.out.println("Dans init()");
 		
+		if(clientService.recupererClients().isEmpty()) {
+			clientService.ajouterClient(null, "antoine", "antoine", "a", false);
+			clientService.ajouterClient(null, "admin", "admin", "admin", true);
+		}
+		
 		if(entrepriseService.recupererEntreprises().isEmpty()) {
 			entrepriseService.ajouterEntreprise("Andrice","12 rue Andrice","0000001");
 			entrepriseService.ajouterEntreprise("Boulanger","12 rue Boulanger","0000002");
@@ -118,13 +123,16 @@ public class ContratController {
 	
 	@GetMapping("pageclient")
 	public ModelAndView pageClientGet(@RequestParam("IDENTIFIANT_CLIENT") String identifiant) {
-		
-		ModelAndView mav = new ModelAndView("pageclient");
-		mav.addObject("clientConnecte",clientService.recupererClient(identifiant));
-		mav.addObject("clients",clientService.recupererClients());
-		mav.addObject("contrats",contratService.recupererContrats());
-		mav.addObject("entreprises", entrepriseService.recupererEntreprises());
-		return mav;
+		if(!identifiant.isEmpty() && clientService.recupererClient(identifiant)!=null ) {
+			ModelAndView mav = new ModelAndView("pageclient");
+			mav.addObject("clientConnecte",clientService.recupererClient(identifiant));
+			mav.addObject("clients",clientService.recupererClients());
+			mav.addObject("contrats",contratService.recupererContrats());
+			mav.addObject("entreprises", entrepriseService.recupererEntreprises());
+			return mav;
+		}else {
+			return new ModelAndView("redirect:/index");
+		}
 		
 	}
 	
