@@ -37,7 +37,7 @@
 			<c:forEach items="${contrats}" var="contrat">
 				<tr>
 				  	<td><p>${contrat.commentaire}</p></td>
-					<td><a href="file://pdf/${contrat.lienPdf }">${contrat.lienPdf}</a></td>
+					<td><a href="file:///style/${contrat.lienPdf }">${contrat.lienPdf}</a></td>
 					<td><p>${contrat.entreprise.nom}</p></td>
 					<c:if test="${contrat.valide eq true}">
 						<td><img src="style/valide.png"/></td>
