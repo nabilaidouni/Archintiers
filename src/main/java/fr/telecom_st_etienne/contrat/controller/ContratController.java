@@ -42,7 +42,6 @@ public class ContratController {
 
 	//Save the uploaded file to this folder
     private static String UPLOADED_FOLDER = "src/main/webapp/style/";
-	//private static String UPLOADED_FOLDER = "";
 	@Autowired
 	private ClientService clientService;
 	@Autowired
@@ -190,23 +189,30 @@ public class ContratController {
 		return mav;
 		
 	}
-	
+	/***
+	 * Creation d'un contrat
+	 * @param idClient
+	 * @param idEntreprise
+	 * @param commentaire
+	 * @param file
+	 * @return
+	 * @throws IllegalStateException
+	 * @throws IOException
+	 */
 	@PostMapping(value="newContratPost")
 	public ModelAndView newContratPost(@RequestParam("IDENTIFIANT_CLIENT") String idClient, @RequestParam("ID_ENTREPRISE") Long idEntreprise, @RequestParam("COMMENTAIRE") String commentaire, @RequestParam("LIEN_PDF") MultipartFile file) throws IllegalStateException, IOException {
 		
-		//String lienPdf = file_pdf.getOriginalFilename();
-		//String lienPdf = StringUtils.cleanPath(file.getOriginalFilename());
-		//String lienPdf = idClient+file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
-		
+		// recupération du contenu du fichier
 		byte[] bytes = file.getBytes();
+		//récupération du nom du fichier (exemple: "antoine.pdf")
 		String lienPdf = idClient+file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
 		Path relativePath = Paths.get(UPLOADED_FOLDER+lienPdf);
+		//création du chemin absolue, c'est le feu !
 		Path absolutePath = relativePath.toAbsolutePath();
+		// affichage dans la console du chemin absolue
 		System.out.println("Current relative path is: " + absolutePath.toString());
-        //Path path = Paths.get(UPLOADED_FOLDER + lienPdf);
+		//enregistrement du fichier dans le dossier "/style"
         Files.write(absolutePath, bytes);
-        //System.out.println(path.toString());
-		//file_pdf.transferTo("style/");
 		clientService.obtenirContrat(clientService.recupererClient(idClient), contratService.ajouterContrat(commentaire, lienPdf, new Date(), entrepriseService.recupererEntreprise(idEntreprise)));	
 		return new ModelAndView("redirect:/pageclient?IDENTIFIANT_CLIENT=" + idClient);
 	}
