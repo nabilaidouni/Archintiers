@@ -1,14 +1,22 @@
 package fr.telecom_st_etienne.contrat.controller;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +24,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
@@ -31,6 +40,8 @@ import fr.telecom_st_etienne.contrat.service.EntrepriseService;
 @RequestMapping("/")
 public class ContratController {
 
+	//Save the uploaded file to this folder
+    private static String UPLOADED_FOLDER = "src/main/webapp/pdf/";
 	@Autowired
 	private ClientService clientService;
 	@Autowired
@@ -179,9 +190,22 @@ public class ContratController {
 		
 	}
 	
-	@PostMapping("newContratPost")
-	public ModelAndView newContratPost(@RequestParam("IDENTIFIANT_CLIENT") String idClient, @RequestParam("ID_ENTREPRISE") Long idEntreprise, @RequestParam("COMMENTAIRE") String commentaire, @RequestParam("LIEN_PDF") String lienPdf) {
+	@PostMapping(value="newContratPost")
+	public ModelAndView newContratPost(@RequestParam("IDENTIFIANT_CLIENT") String idClient, @RequestParam("ID_ENTREPRISE") Long idEntreprise, @RequestParam("COMMENTAIRE") String commentaire, @RequestParam("LIEN_PDF") MultipartFile file) throws IllegalStateException, IOException {
 		
+		//String lienPdf = file_pdf.getOriginalFilename();
+		//String lienPdf = StringUtils.cleanPath(file.getOriginalFilename());
+		//String lienPdf = idClient+file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
+		
+		byte[] bytes = file.getBytes();
+		String lienPdf = idClient+file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
+		Path relativePath = Paths.get("src/main/webapp/"+lienPdf);
+		Path absolutePath = relativePath.toAbsolutePath();
+		System.out.println("Current relative path is: " + absolutePath.toString());
+        Path path = Paths.get(UPLOADED_FOLDER + lienPdf);
+        Files.write(path, bytes);
+        System.out.println(path.toString());
+		//file_pdf.transferTo("style/");
 		clientService.obtenirContrat(clientService.recupererClient(idClient), contratService.ajouterContrat(commentaire, lienPdf, new Date(), entrepriseService.recupererEntreprise(idEntreprise)));	
 		return new ModelAndView("redirect:/pageclient?IDENTIFIANT_CLIENT=" + idClient);
 	}
