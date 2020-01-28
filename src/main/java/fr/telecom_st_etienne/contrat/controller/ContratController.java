@@ -200,7 +200,7 @@ public class ContratController {
 		
 		byte[] bytes = file.getBytes();
 		String lienPdf = idClient+file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
-		Path relativePath = Paths.get("src/main/webapp/pdf/"+lienPdf);
+		Path relativePath = Paths.get(UPLOADED_FOLDER+lienPdf);
 		Path absolutePath = relativePath.toAbsolutePath();
 		System.out.println("Current relative path is: " + absolutePath.toString());
         //Path path = Paths.get(UPLOADED_FOLDER + lienPdf);
