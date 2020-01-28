@@ -200,12 +200,12 @@ public class ContratController {
 		
 		byte[] bytes = file.getBytes();
 		String lienPdf = idClient+file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
-		Path relativePath = Paths.get("src/main/webapp/"+lienPdf);
+		Path relativePath = Paths.get("src/main/webapp/pdf/"+lienPdf);
 		Path absolutePath = relativePath.toAbsolutePath();
 		System.out.println("Current relative path is: " + absolutePath.toString());
-        Path path = Paths.get(UPLOADED_FOLDER + lienPdf);
-        Files.write(path, bytes);
-        System.out.println(path.toString());
+        //Path path = Paths.get(UPLOADED_FOLDER + lienPdf);
+        Files.write(absolutePath, bytes);
+        //System.out.println(path.toString());
 		//file_pdf.transferTo("style/");
 		clientService.obtenirContrat(clientService.recupererClient(idClient), contratService.ajouterContrat(commentaire, lienPdf, new Date(), entrepriseService.recupererEntreprise(idEntreprise)));	
 		return new ModelAndView("redirect:/pageclient?IDENTIFIANT_CLIENT=" + idClient);
