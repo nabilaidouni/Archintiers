@@ -41,7 +41,8 @@ import fr.telecom_st_etienne.contrat.service.EntrepriseService;
 public class ContratController {
 
 	//Save the uploaded file to this folder
-    private static String UPLOADED_FOLDER = "src/main/webapp/pdf/";
+    //private static String UPLOADED_FOLDER = "src/main/webapp/pdf/";
+	private static String UPLOADED_FOLDER = "";
 	@Autowired
 	private ClientService clientService;
 	@Autowired
