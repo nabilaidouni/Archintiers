@@ -22,7 +22,7 @@
 	</nav>
 	<div class="text-center"><h1 class="display-2">Modification de contrat</h1></div>
 		<div class=" container text-center border">
-		<form action="newContratPost" method="post">
+		<form action="newContratPost" method="post" enctype="multipart/form-data">
 		<table>
 			<tr>
 				<td><p>Entreprise : </p></td>
@@ -50,7 +50,7 @@
 			<tr>
 				<td><p>Lien du pdf de description du contrat : </p></td>
 				<td>
-					<textarea name="LIEN_PDF" rows="5" cols="33" required>${clientConnecte.contrat.lienPdf}</textarea>
+					<input type="file" name="LIEN_PDF" required/>
 				</td>
 			</tr>
 			<tr>

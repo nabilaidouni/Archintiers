@@ -27,6 +27,7 @@
 		<table class="table table-striped" id="tableau">
 			<thead>
 			<tr>
+				<th>Nom eleve</th>
 				<th>Contrat Professionnel</th>
 				<th>detail du contrat (pdf)</th>
 				<th>Entreprise</th>
@@ -34,23 +35,28 @@
 			</tr>
 			</thead>
 			<tbody>
-			<c:forEach items="${contrats}" var="contrat">
+			<c:forEach items="${clients}" var="client">
+				<c:if test="${client.admin eq false}">
+				<c:if test="${client.contrat ne null}">
 				<tr>
-				  	<td><p>${contrat.commentaire}</p></td>
-					<td><a href="style/${contrat.lienPdf }">${contrat.lienPdf}</a></td>
-					<td><p>${contrat.entreprise.nom}</p></td>
-					<c:if test="${contrat.valide eq true}">
+					<td><p>${client.nom}</p></td>
+				  	<td><p>${client.contrat.commentaire}</p></td>
+					<td><a href="style/${client.contrat.lienPdf }">${client.contrat.lienPdf}</a></td>
+					<td><p>${client.contrat.entreprise.nom}</p></td>
+					<c:if test="${client.contrat.valide eq true}">
 						<td><img src="style/valide.png"/></td>
 					</c:if>
-					<c:if test="${contrat.valide eq false}">
+					<c:if test="${client.contrat.valide eq false}">
 						<td>
 							<form action="validationContratPost" method="post">
-								<input type="number" name="ID_CONTRAT" value="${contrat.id}" style="display: none;"/>
+								<input type="number" name="ID_CONTRAT" value="${client.contrat.id}" style="display: none;"/>
 								<input type="submit" value="Valider"></input>
 							</form>
 						</td>
 					</c:if>
 				</tr>
+				</c:if>
+				</c:if>
 			</c:forEach>
 			</tbody>
 		</table>
