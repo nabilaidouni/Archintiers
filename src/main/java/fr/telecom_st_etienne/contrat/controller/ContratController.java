@@ -67,11 +67,6 @@ public class ContratController {
 	public void init() {
 		System.out.println("Dans init()");
 		
-		if(clientService.recupererClients().isEmpty()) {
-			clientService.ajouterClient(null, "antoine", "antoine", "a", false);
-			clientService.ajouterClient(null, "admin", "admin", "admin", true);
-		}
-		
 		if(entrepriseService.recupererEntreprises().isEmpty()) {
 			entrepriseService.ajouterEntreprise("Andrice","12 rue Andrice","0000001");
 			entrepriseService.ajouterEntreprise("Boulanger","12 rue Boulanger","0000002");
@@ -86,17 +81,15 @@ public class ContratController {
 		}
 		
 		if(contratService.recupererContrats().isEmpty()) {
-			contratService.ajouterContrat("Developpeur JAVA","coco.pdf", new Date(), entrepriseService.recupererEntreprise(1L));
-			contratService.ajouterContrat("Developpeur C","caca.pdf", new Date(), entrepriseService.recupererEntreprise(2L));
-			contratService.ajouterContrat("Developpeur Ruby","cucu.pdf", new Date(), entrepriseService.recupererEntreprise(3L));
-			contratService.ajouterContrat("Developpeur Python","cici.pdf", new Date(), entrepriseService.recupererEntreprise(4L));
+			contratService.ajouterContrat("Developpeur JAVA","jack.pdf", new Date(), entrepriseService.recupererEntreprise(1L));
+			contratService.ajouterContrat("Developpeur C","nabil.pdf", new Date(), entrepriseService.recupererEntreprise(2L));
 		}
 		
 		if(clientService.recupererClients().isEmpty()) {
-			clientService.ajouterClient(contratService.recupererContrat(1L),"Thales","thales","thales", true);
-			clientService.ajouterClient(contratService.recupererContrat(2L),"Pythagore","pythagore","pythagore", false);
-			clientService.ajouterClient(contratService.recupererContrat(3L),"Laplace","laplace","laplace", false);
-			clientService.ajouterClient(contratService.recupererContrat(4L),"Bayes","bayes","bayes", false);
+			clientService.ajouterClient(contratService.recupererContrat(1L),"jack","jack","jack", false);
+			clientService.ajouterClient(contratService.recupererContrat(2L),"nabil","nabil","nabil", false);
+			clientService.ajouterClient(null, "antoine", "antoine", "antoine", false);
+			clientService.ajouterClient(null, "admin", "admin", "admin", true);
 		}
 	}
 	
