@@ -13,7 +13,7 @@
 		<hibernate.version>5.4.6.Final</hibernate.version>
 		<tomcat.version>8.5.19</tomcat.version>
 		<jstl.version>1.2</jstl.version>
-		<mysql.connector.version>5.1.48</mysql.connector.version>
+		<mysql.connector.version>8.0.16</mysql.connector.version>
 		<jackson.version>2.9.10</jackson.version>
 	</properties>
 
